@@ -26,6 +26,13 @@ The fonts available in the Customizer are defined in `includes/customizer/fonts.
 
 **The array item value** should be the name of the font. For example, `Lato`. This is used for display in the fonts dropdowns but also in the `font-family` CSS rules.
 
+```
+$this->font_choices = [
+	'Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap'   => 'Lato',
+	'Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap' => 'Merriweather',
+];
+```
+
 ## How the colors work
 
 The color pickers in the Customizer are defined in `/includes/config.php`. These colors are then registered as Customizer fields in `includes/customizer/colors.php`.
