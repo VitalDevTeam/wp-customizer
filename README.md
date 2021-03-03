@@ -8,7 +8,7 @@ Adds font and color settings to the WordPress Customizer.
 
 Select fonts for headings and body text.
 
-### Colors 
+### Colors
 
 Select colors for major theme elements as well as 12 custom colors. Custom colors 1 and 2 act as the primary and secondary CTA colors respectively.
 
@@ -17,6 +17,14 @@ Select colors for major theme elements as well as 12 custom colors. Custom color
 * **`vtl_get_custom_logo()`** Gets the logo that has been set in the Site Identity panel in the Customizer.
 * **`vtl_the_custom_logo()`** Prints the logo that has been set in the Site Identity panel in the Customizer.
 * **`vtl_get_theme_colors()`** Gets the current theme color settings.
+
+## How the fonts work
+
+The fonts available in the Customizer are defined in `includes/customizer/fonts.php`. Create your list of fonts by adding them as items in the `font_choices` array.
+
+**The array item key** should be equal to the Google Font's stylesheet URL parameters. Basically, everything after the `?` in the URL. For example, the stylesheet URL for Lato Regular and Bold is `https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap`. This means the item key should be `Lato:wght@400;700&display=swap`
+
+**The array item value** should be the name of the font. For example, `Lato`. This is used for display in the fonts dropdowns but also in the `font-family` CSS rules.
 
 ## How the colors work
 
@@ -27,6 +35,7 @@ Like all Customizer settings, the values of the color fields are saved in the da
 If a color field has a value, inline CSS is printed into the site’s head. This is done via the `enqueue_styles` function in `includes/customizer/colors.php`.
 
 ### Using the colors on your elements
+
 You have two options to add these Customizer colors to your elements.
 
 #### Option 1: Use the default inline class
