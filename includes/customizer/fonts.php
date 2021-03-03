@@ -106,7 +106,7 @@ class VTL_Customizer_Fonts {
 			$font_pieces = explode(':', $font_headings);
 
 			$inline_style[] = vtl_generate_css(
-				'h1, h2, h3, h4, h5, h6',
+				'h1, h2, h3, h4, h5, h6, .has-heading-font',
 				'font-family: ' . esc_html($font_pieces[0])
 			);
 		}
@@ -122,7 +122,7 @@ class VTL_Customizer_Fonts {
 			$font_pieces = explode(':', $body_font);
 
 			$inline_style[] = vtl_generate_css(
-				'body, button, input, select, textarea',
+				'body, button, input, select, textarea, .has-body-font',
 				'font-family: ' . esc_html($font_pieces[0])
 			);
 		}
