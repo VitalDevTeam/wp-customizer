@@ -28,8 +28,8 @@ The fonts available in the Customizer are defined in `includes/customizer/fonts.
 
 ```
 $this->font_choices = [
-	'Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap'   => 'Lato',
-	'Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap' => 'Merriweather',
+   'Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap'   => 'Lato',
+   'Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap' => 'Merriweather',
 ];
 ```
 
