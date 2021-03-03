@@ -204,7 +204,7 @@ class VTL_Customizer_Colors {
 				if ($cc_index === 2) {
 
 					$inline_style[] = vtl_generate_css(
-						".secondary-cta",
+						'.secondary-cta',
 						[
 							'border-style: solid',
 							'border-width: 2px',
